@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 const projects = [
   {
@@ -98,7 +98,7 @@ function App() {
       <header className="header">
         <div className="container nav-wrapper">
           <a href="#home" className="brand" onClick={closeMenu}>
-            Roman Pekaj
+            Roman
           </a>
 
           <button
@@ -136,7 +136,7 @@ function App() {
         {/* Hero section */}
         <section className="hero section">
           <div className="container hero-content">
-            <p className="eyebrow">Roman Pekaj - Hotel Website Portfolio</p>
+            <p className="eyebrow">Roman - Hotel Website Portfolio</p>
             <h1>
               Hotel websites built to look premium and generate direct booking
               inquiries
@@ -365,7 +365,7 @@ function App() {
       <footer className="footer">
         <div className="container footer-content">
           <div>
-            <p className="footer-brand">Roman Pekaj</p>
+            <p className="footer-brand">Roman</p>
             <p>Hotel Website Portfolio</p>
           </div>
           <div className="footer-links">
