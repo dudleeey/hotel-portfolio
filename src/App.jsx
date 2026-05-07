@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import veyraImage from "./assets/veyra-house.png";
+import nomiaImage from "./assets/nomia-stay-chania.png";
+import aetherionImage from "./assets/aetherion-bay-hotel.png";
 
 const projects = [
   {
@@ -8,7 +11,7 @@ const projects = [
       "An editorial-style boutique hotel website focused on atmosphere, storytelling, and premium brand identity.",
     demoLink: "https://veyra-house.vercel.app",
     tags: ["Boutique", "Editorial", "Brand-focused"],
-    palette: "placeholder-one",
+    image: veyraImage,
   },
   {
     title: "Nomia Stay Chania",
@@ -17,7 +20,7 @@ const projects = [
       "A practical, conversion-focused accommodation website with clear pricing, booking bar, and simple guest decision flow.",
     demoLink: "https://nomiastaychania.vercel.app",
     tags: ["Budget stay", "Booking-focused", "Practical UX"],
-    palette: "placeholder-two",
+    image: nomiaImage,
   },
   {
     title: "Aetherion Bay Hotel",
@@ -26,7 +29,7 @@ const projects = [
       "A premium hotel website with elegant visuals, sea-view branding, room cards, gallery, and direct booking inquiry flow.",
     demoLink: "https://aetherion-bay-hotel.vercel.app",
     tags: ["Luxury", "Seaside", "Premium"],
-    palette: "placeholder-three",
+    image: aetherionImage,
   },
 ];
 
@@ -174,9 +177,12 @@ function App() {
             <div className="projects-grid">
               {projects.map((project) => (
                 <article className="project-card" key={project.title}>
-                  <div className={`project-placeholder ${project.palette}`}>
-                    <span>Screenshot Placeholder</span>
-                    <small>Replace with your project screenshot</small>
+                  <div className="project-placeholder">
+                    <img
+                      src={project.image}
+                      alt={`${project.title} preview`}
+                      className="project-image"
+                    />
                   </div>
                   <div className="project-content">
                     <p className="project-type">{project.type}</p>
